@@ -1,4 +1,4 @@
-# ModalManager — Agent Instructions
+# InAppNotifier — Agent Instructions
 
 App that lets agents configure and trigger custom modal dialogs on Zendesk tickets.
 
@@ -20,7 +20,7 @@ It declares no required parameters by default. Any future external API integrati
 
 ## Commands
 
-From `ModalManager/`:
+From the repo root:
 
 ```bash
 npm install
