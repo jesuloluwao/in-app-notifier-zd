@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 import { Modal } from '@zendeskgarden/react-modals';
 import { Button } from '@zendeskgarden/react-buttons';
 import styled from 'styled-components';
@@ -57,7 +58,7 @@ export const RulePreview = ({ rule, onClose }) => {
     <Modal onClose={onClose}>
       <Modal.Header>{rule.name || 'Rule Preview'}</Modal.Header>
       <Modal.Body>
-        <MessageContent dangerouslySetInnerHTML={{ __html: rule.message }} />
+        <MessageContent dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(rule.message || '') }} />
       </Modal.Body>
       <Modal.Footer>
         <Modal.FooterItem>

@@ -142,6 +142,7 @@
     }
   </style>
   <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script src="purify.min.js"></script>
 </head>
 <body>
   <div class="modal-container">
@@ -168,8 +169,8 @@
       // Set title as text
       document.getElementById('modal-title').textContent = decodedTitle;
       
-      // Set message as HTML (from WYSIWYG editor)
-      document.getElementById('modal-message').innerHTML = decodedMessage;
+      // Set message as HTML (from WYSIWYG editor), sanitized to prevent XSS
+      document.getElementById('modal-message').innerHTML = DOMPurify.sanitize(decodedMessage);
       
       // Calculate height based on content
       var calculateHeight = function() {

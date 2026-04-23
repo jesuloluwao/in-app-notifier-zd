@@ -1,11 +1,12 @@
 {
-  "name": "Modals",
+  "name": "In App Notifier",
   "author": {
     "name": "Lolu",
     "email": "hello@loluolaoye.com"
   },
   "defaultLocale": "en",
-  "private": true,
+  "private": false,
+  "termsConditionsUrl": "https://YOUR-DOMAIN/in-app-notifier/terms",
   "location": {
     "support": {
       "ticket_sidebar": {
@@ -23,6 +24,6 @@
   },
   "domainWhitelist": [],
   "parameters": [],
-  "version": "1.0",
+  "version": "1.0.0",
   "frameworkVersion": "2.0"
 }

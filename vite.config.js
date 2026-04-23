@@ -23,6 +23,7 @@ export default ({ mode }) => {
           { src: resolve(__dirname, 'src/assets/*'), dest: './' },
           { src: resolve(__dirname, 'src/templates/*'), dest: './' },
           { src: resolve(__dirname, 'src/modal.html'), dest: './' },
+          { src: resolve(__dirname, 'node_modules/dompurify/dist/purify.min.js'), dest: './' },
           { src: resolve(__dirname, 'src/manifest.json'), dest: '../', modifier: changeLocation },
           {
             src: resolve(__dirname, 'src/translations/en.json'),

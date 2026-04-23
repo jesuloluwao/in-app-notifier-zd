@@ -25,6 +25,7 @@
     "@zendeskgarden/react-tabs": "^9.15.0",
     "@zendeskgarden/react-theming": "^9.0.0",
     "@zendeskgarden/react-typography": "^8.76.3",
+    "dompurify": "^3.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-quill": "^2.0.0",
