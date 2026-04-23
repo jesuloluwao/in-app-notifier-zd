@@ -1,0 +1,28 @@
+{
+  "name": "Modals",
+  "author": {
+    "name": "Lolu",
+    "email": "hello@loluolaoye.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "http://localhost:3000/index.html",
+        "flexible": true
+      },
+      "new_ticket_sidebar": {
+        "url": "http://localhost:3000/index.html",
+        "flexible": true
+      },
+      "nav_bar": {
+        "url": "http://localhost:3000/index.html"
+      }
+    }
+  },
+  "domainWhitelist": [],
+  "parameters": [],
+  "version": "1.0",
+  "frameworkVersion": "2.0"
+}

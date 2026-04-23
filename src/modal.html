@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alert</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .modal-container {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .modal-header {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2F3941;
+      margin: 0 0 16px 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #E9EBED;
+      line-height: 1.3;
+    }
+    
+    .modal-body {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #49545C;
+      overflow-y: auto;
+    }
+    
+    /* Styles for HTML content from WYSIWYG editor */
+    .modal-body h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #2F3941;
+    }
+    
+    .modal-body h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #2F3941;
+    }
+    
+    .modal-body h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #2F3941;
+    }
+    
+    .modal-body p {
+      margin-bottom: 12px;
+    }
+    
+    .modal-body ul, .modal-body ol {
+      margin-bottom: 12px;
+      padding-left: 24px;
+    }
+    
+    .modal-body li {
+      margin-bottom: 4px;
+    }
+    
+    .modal-body a {
+      color: #1F73B7;
+      text-decoration: none;
+    }
+    
+    .modal-body a:hover {
+      text-decoration: underline;
+    }
+    
+    .modal-body strong {
+      font-weight: 600;
+    }
+    
+    .modal-body em {
+      font-style: italic;
+    }
+    
+    .modal-body u {
+      text-decoration: underline;
+    }
+    
+    .modal-body s {
+      text-decoration: line-through;
+    }
+    
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid #E9EBED;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s, opacity 0.2s;
+      font-family: inherit;
+    }
+    
+    .btn:hover {
+      opacity: 0.9;
+    }
+    
+    .btn:active {
+      opacity: 0.8;
+    }
+    
+    .btn-primary {
+      background-color: #1F73B7;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1565A0;
+    }
+  </style>
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+</head>
+<body>
+  <div class="modal-container">
+    <div class="modal-header" id="modal-title">Notice</div>
+    <div class="modal-body" id="modal-message">Loading...</div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" id="close-btn">Close</button>
+    </div>
+  </div>
+  
+  <script>
+    (function() {
+      var client = ZAFClient.init();
+      
+      // Get data from URL parameters
+      var urlParams = new URLSearchParams(window.location.search);
+      var title = urlParams.get('title') || 'Notice';
+      var message = urlParams.get('message') || 'No message provided';
+      
+      // Decode URL-encoded strings
+      var decodedTitle = decodeURIComponent(title);
+      var decodedMessage = decodeURIComponent(message);
+      
+      // Set title as text
+      document.getElementById('modal-title').textContent = decodedTitle;
+      
+      // Set message as HTML (from WYSIWYG editor)
+      document.getElementById('modal-message').innerHTML = decodedMessage;
+      
+      // Calculate height based on content
+      var calculateHeight = function() {
+        var body = document.body;
+        var height = Math.min(Math.max(body.scrollHeight + 50, 250), 600);
+        client.invoke('resize', { width: '550px', height: height + 'px' });
+      };
+      
+      // Resize after content is set
+      setTimeout(calculateHeight, 100);
+      
+      // Close button handler
+      document.getElementById('close-btn').addEventListener('click', function() {
+        client.invoke('destroy');
+      });
+      
+      // Also close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          client.invoke('destroy');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
