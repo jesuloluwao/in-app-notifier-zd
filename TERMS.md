@@ -41,7 +41,7 @@ You are responsible for:
 The App processes data made available through your Zendesk instance as needed to provide App functionality.
 
 Your use of the App is also subject to our Privacy Policy:  
-**[Insert Privacy Policy URL]**
+https://github.com/jesuloluwao/in-app-notifier-zd/blob/main/PRIVACY.md
 
 ## 6. Third-Party Services
 
@@ -83,9 +83,9 @@ Sections that by nature should survive termination will survive (including discl
 
 ## 13. Governing Law
 
-These Terms are governed by the laws of **[Insert Governing Jurisdiction]**, without regard to conflict-of-law rules.
+These Terms are governed by and interpreted under the laws of the Federal Republic of Nigeria, without regard to conflict-of-law rules.
 
-Any disputes will be resolved in the courts located in **[Insert Venue]**, unless otherwise required by law.
+Any disputes arising out of or relating to these Terms will be subject to the exclusive jurisdiction of the courts of Lagos State, Nigeria, unless otherwise required by applicable law.
 
 ## 14. Changes to These Terms
 
@@ -98,8 +98,4 @@ For support or legal notices, contact:
 
 - **Name:** Lolu
 - **Email:** hello@loluolaoye.com
-- **Website:** [Insert Website URL]
 
----
-
-**Important:** This template is provided for convenience and is not legal advice. Consider review by qualified counsel before publishing.
