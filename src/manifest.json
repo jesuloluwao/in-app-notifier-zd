@@ -2,11 +2,12 @@
   "name": "In App Notifier",
   "author": {
     "name": "Lolu",
-    "email": "hello@loluolaoye.com"
+    "email": "hello@loluolaoye.com",
+    "url": "https://github.com/jesuloluwao/in-app-notifier-zd"
   },
   "defaultLocale": "en",
   "private": false,
-  "termsConditionsUrl": "https://github.com/jesuloluwao/in-app-notifier-zd/blob/main/TERMS.md",
+  "termsConditionsURL": "https://github.com/jesuloluwao/in-app-notifier-zd/blob/main/TERMS.md",
   "location": {
     "support": {
       "ticket_sidebar": {

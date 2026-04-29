@@ -1,10 +1,10 @@
 {
   "app": {
-    "name": "Example App",
-    "short_description": "Short Description",
-    "long_description": "Long Description",
-    "installation_instructions": "Configure the following app settings, then click Install:...",
-    "title": "Example App"
+    "name": "In App Notifier",
+    "short_description": "Create and show custom in-app modal alerts in Zendesk Support.",
+    "long_description": "In App Notifier helps support teams display targeted modal alerts to agents directly inside Zendesk Support. Use it to announce policy updates, critical operational notices, workflow reminders, and contextual prompts during ticket handling.\n\n### What it does\n\n* Creates configurable modal notifications\n* Lets admins manage message content and display rules\n* Supports rich-text messages for clearer communication\n* Works in ticket sidebar, new ticket sidebar, and nav bar locations\n\n### Data usage and privacy\n\nThe app accesses Zendesk account metadata and ticket-related data needed to evaluate configured rules and render notifications. Configuration data you create in the app is stored in your Zendesk environment.\n\nPrivacy Policy: https://github.com/jesuloluwao/in-app-notifier-zd/blob/main/PRIVACY.md",
+    "installation_instructions": "1. In Zendesk Admin Center, go to Apps and integrations > Zendesk Support apps.\n2. Find and install In App Notifier from Zendesk Marketplace.\n3. Open the app in the nav bar to create notification rules and message content.\n4. Test rules from a ticket to confirm modals appear as expected.\n5. Publish your rule configuration for your support team.",
+    "title": "In App Notifier"
   },
   "ticket_sidebar": {
     "title": "Hello from Ticket Side Bar"
